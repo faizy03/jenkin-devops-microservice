@@ -1,5 +1,7 @@
 pipeline {
-	agent { docker { image 'node'} }
+	agent { docker {
+		alwaysPull true
+		image 'node'} }
 	stages {
 		stage('Build') {
 			steps {
